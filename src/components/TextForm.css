@@ -1,0 +1,21 @@
+.box{
+    color: black;
+    position:absolute;
+    left:20%;
+    right:0;
+    top:50%;
+    background-color: white;
+    height: auto;
+    width: 100px;
+}
+.navbar-custom {
+    background-color: lightgreen;
+}
+.box ul{
+    list-style: none;
+    padding: 10px;
+}
+.show>.dropdown-menu {
+    display: block;
+    position: absolute;
+  }
