@@ -34,6 +34,7 @@ export default function TextForm(props) {
           props.showAlert("Convert to Uppercase","success")
 
         }
+        wordCount()
       };
       
       const onclickBtn2 = ()=>{
@@ -43,6 +44,7 @@ export default function TextForm(props) {
           props.showAlert("Convert to Lowercase","success")
 
         }
+        wordCount()
       };
       
       const email = (text)=>{
@@ -60,6 +62,7 @@ export default function TextForm(props) {
       let newtext = "";
       setText(newtext)
       props.showAlert("Textbox Cleared","success")
+      wordCount()
     };
     
     const removeSpaces =()=>{
@@ -70,6 +73,7 @@ export default function TextForm(props) {
         props.showAlert("Extra Spaces Removed","success")
 
       }
+      wordCount()
     };
 
    
