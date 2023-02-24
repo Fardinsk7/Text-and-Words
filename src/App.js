@@ -1,16 +1,16 @@
 import './App.css';
-// import Aboutus from './components/Aboutus';
+import Aboutus from './components/Aboutus';
 import Navbar from "./components/Navbar"
 import TextForm from "./components/TextForm"
 import React,{useState} from 'react';
 import Alert from './components/Alert';
 
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+  // Link
+} from "react-router-dom";
 // import Switch from 'switch';
 
 function App() {
@@ -55,20 +55,26 @@ function App() {
   }
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Navbar title ="TextUtils" aboutText='About us' mode={mode} toggleBtn ={toggleBtns} modebtnText={modebtnText} summer={summer} rainy={rainy} winter={winter} /> 
     <Alert alert={alert}/>
+    {/* <TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} /> */}
       <Routes>
         <Route exact path="/" element={<TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} />}/>
         <Route exact path="/about" element={<Aboutus mode={mode} />} />
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
   
         {/* <Aboutus/> */}
   {/* Props are like arguments to function  */}
-  <Navbar title ="TextUtils"  mode={mode} toggleBtn ={toggleBtns} modebtnText={modebtnText} summer={summer} rainy={rainy} winter={winter} /> 
+
+
+
+
+
+  {/* <Navbar title ="TextUtils"  mode={mode} toggleBtn ={toggleBtns} modebtnText={modebtnText} summer={summer} rainy={rainy} winter={winter} /> 
     <Alert alert={alert}/>   
-    <TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} />
+    <TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} /> */}
    </>
   );
 }

@@ -14,7 +14,7 @@ export default function TextForm(props) {
     
     const wordCount =()=>{
       let a=0;
-      let b = text.split(/[ ]+/)
+      let b = text.split(/\s+/)
       // console.log(b)
       b.forEach(myfunction)
       function myfunction(v){
@@ -88,17 +88,17 @@ export default function TextForm(props) {
         <div className="input-group">
         <textarea className="form-control w-10 textbox my-3" aria-label="With textarea" rows="7" value ={text}  onChange={onchageTextarea} style={{color:props.mode === "dark"?"black":"white",backgroundColor:props.mode === "dark"?"white":"#282727"}} ></textarea>{/* since we have assign value = text that is a state variable here so without onChange event we will not able to change the text inside the textarea */}
         </div>
-        <button className="btn btn-primary m-2" onClick={onclickBtn1} >Convert to Uppercase</button>
-        <button className="btn btn-primary m-2" onClick={onclickBtn2} >Convert to Lowercase</button>
-        <button className="btn btn-primary m-2" onClick={clear} >Clear</button>
-        <button className="btn btn-primary m-2" onClick={removeSpaces} >Remove Extra Spaces</button>
+        <button disabled={text.length===0} className="btn btn-primary m-2" onClick={onclickBtn1} >Convert to Uppercase</button>
+        <button disabled={text.length===0} className="btn btn-primary m-2" onClick={onclickBtn2} >Convert to Lowercase</button>
+        <button disabled={text.length===0} className="btn btn-primary m-2" onClick={clear} >Clear</button>
+        <button disabled={text.length===0} className="btn btn-primary m-2" onClick={removeSpaces} >Remove Extra Spaces</button>
     </div>
 
     <div className="container" style={{color:props.mode === "dark"?"black":"white"}}>
-      <p>Number of words: <b>{word}</b>  Number of character: <b>{text.length}</b></p>
-      <p><b>{(0.008 * text.split(" ").length).toFixed(2)}</b> Minutes read</p>
+      <p>Number of words: <b>{text.length <=0?0:word}</b>  Number of character: <b>{text.length}</b></p>
+      <p><b>{text.length<=0?"0.00":((0.008 * text.split(" ").length).toFixed(2))}</b> Minutes read</p>
       <h2>Preview of given text:</h2>
-      <p style={{color:props.mode === "dark"?"grey":"white"}}>{text.length>0?text:"Enter text in above box to preview..."}</p>
+      <p style={{color:props.mode === "dark"?"grey":"white",height:"50px"}}>{text.length>0?text:"Nothing to Preview!"}</p>
     </div><br />
 
     <div className="container" style={{color:props.mode === "dark"?"black":"white"}}>

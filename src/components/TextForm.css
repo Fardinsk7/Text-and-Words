@@ -11,6 +11,9 @@
 .navbar-custom {
     background-color: lightgreen;
 }
+.accordion-button::after {
+    filter:invert(1);
+}
 .box ul{
     list-style: none;
     padding: 10px;
