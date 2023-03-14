@@ -60,6 +60,7 @@ function App() {
     <Alert alert={alert}/>
     {/* <TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} /> */}
       <Routes>
+        <Route exact path="/Text-and-Words" element={<TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} />}/>
         <Route exact path="/" element={<TextForm heading="Enter the text to analyze:" mode={mode} showAlert ={showAlert} />}/>
         <Route exact path="/about" element={<Aboutus mode={mode} />} />
       </Routes>
